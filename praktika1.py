@@ -1,2 +1,2 @@
 
-class Employee
+class Employee():
