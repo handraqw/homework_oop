@@ -20,5 +20,5 @@ class Manager(Employee):
     def __init__(self, name, work_experience, high_educated):
         super().__init__(name, work_experience, high_educated)
 
-# class Developer(Employee):
+# class Developer(Employee)b:
 
