@@ -2,6 +2,12 @@ class Employee:
     """Родительский класс для сотрудника с именем и базовой зарплатой."""
 
     def __init__(self, name, base_salary):
+        """
+        Инициализация сотрудника.
+        name: имя сотрудника
+        base_salary: базовая зарплата
+        """
+
         self.name = name
         self.base_salary = base_salary
 
@@ -19,6 +25,11 @@ class Manager(Employee):
     """Класс менеджера, наследует Employee и добавляет бонус к зарплате."""
 
     def __init__(self, name, base_salary, bonus):
+        """
+        Инициализация менеджера.
+        bonus: бонус к базовой зарплате
+        """
+
         super().__init__(name, base_salary)
         self.bonus = bonus
 
@@ -31,6 +42,11 @@ class Developer(Employee):
     """Класс разработчика, наследует Employee и использует коэффициент для расчёта зарплаты."""
 
     def __init__(self, name, base_salary, coefficient):
+        """
+        Инициализация разработчика.
+        coefficient: множитель к базовой зарплате
+        """
+
         super().__init__(name, base_salary)
         self.coefficient = coefficient
 
@@ -39,7 +55,7 @@ class Developer(Employee):
 
         return int(self.base_salary * self.coefficient)
     
-    
+
 
 staff_manager = Manager('Андрей', 100_000, 20_000)
 staff_developer = Developer('Никита', 100_000, 1.3)
