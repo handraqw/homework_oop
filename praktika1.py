@@ -24,5 +24,12 @@ class Developer(Employee):
         self.coefficient = coefficient
 
     def calculate_salary(self):
-        return self.base_salary * self.coefficient
+        return int(self.base_salary * self.coefficient)
 
+staff_manager = Manager('Андрей', 100_000, 20_000)
+staff_developer = Developer('Никита', 100_000, 1.3)
+staff_employee = Employee('Джон', 50_000)
+
+print(staff_manager)
+print(staff_developer)
+print(staff_employee)
